@@ -1,6 +1,40 @@
-# Symbolic_AI
+# Symbolic Calculations Project
 
 This project focuses on symbolic calculation tasks using deep learning models, specifically Long Short-Term Memory (LSTM) and Transformer models. The tasks include dataset preprocessing, training LSTM and Transformer models to learn Taylor expansions of mathematical functions, and providing predictions.
+
+```graphql
+symbolicAI/
+│
+├── datasets/
+│   ├── Data.py           # Code for dataset cleaning, tokenization, etc.
+│   ├── _init_.py
+│   ├── registry.py       # All datasets must be registered
+│   └── utils.py          # Helper modules
+│
+├── engine/
+│   ├── _init_.py
+│   ├── config.py         # Configuration for model training
+│   ├── plotter.py        # Plotting utility for loss and accuracy
+│   ├── predictor.py      # Prediction utility
+│   ├── trainer.py        # Model training utility
+│   └── utils.py          # Helper modules
+│
+├── models/
+│   ├── BART.py           # Code for BART model
+│   ├── LED.py            # Code for Longformer Encoder Decoder model
+│   ├── _init_.py
+│   ├── registry.py       # All models must be registered
+│   └── seq2seq_transformer.py  # Code for Sequence-to-Sequence Transformer model
+│
+├── runs/
+│   ├── bart-base_trainer.sh    # Script to run BART-base model from terminal
+│   ├── seq2seq_trainer.sh      # Script to run Sequence-to-Sequence Transformer from terminal
+│
+├── symba_trainer.py   # Trainer script for use inside bash scripts
+├── symba_tuner.py     # Hyperparameter optimization using Optuna
+├── symba_example.ipynb   # Example notebook
+└── README.md           # Project documentation
+```
 
 Components
 ### 1. Dataset Preprocessing (Common Task 1)
